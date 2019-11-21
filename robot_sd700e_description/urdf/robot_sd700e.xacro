@@ -51,6 +51,7 @@
     <origin xyz="0 0 0.145" rpy="0 0 0" />
     <parent link="base_link" />
     <child link="link1" />
+    <!--axis xyz="0 0 -1" /-->
     <axis xyz="0 0 1" />
     <limit lower="-2.96" upper="2.96" effort="100" velocity="1" />
   </joint>
@@ -79,9 +80,11 @@
   </link>
   <joint name="joint2" type="revolute">
     <origin xyz="0 0 0.118" rpy="1.5708 -1.5708 3.1416" />
+    <!--origin xyz="0 0 0.118" rpy="${M_PI / 2} 0 0" / -->
     <parent link="link1" />
     <child link="link2" />
-    <axis xyz="0 0 -1" />
+    <axis xyz="0 0 1" />
+    <!--axis xyz="0 0 -1" /-->
     <limit lower="-1.91" upper="1.91" effort="100" velocity="1" />
   </joint>
   <link name="link3">
@@ -139,7 +142,8 @@
     <origin xyz="0 0.08 0" rpy="-1.5708 0 0" />
     <parent link="link3" />
     <child link="link4" />
-    <axis xyz="0 0 -1" />
+    <!--axis xyz="0 0 -1" /-->
+    <axis xyz="0 0 1" />
     <limit lower="-3.22" upper="3.22" effort="100" velocity="1" />
   </joint>
   <link name="link5">
@@ -197,6 +201,7 @@
     <origin xyz="0 0.0745 0" rpy="-1.5708 0 0" />
     <parent link="link5" />
     <child link="link6" />
+    <!--axis xyz="0 0 -1" /-->
     <axis xyz="0 0 1" />
     <limit lower="-6.28" upper="6.28" effort="100" velocity="1" />
   </joint>

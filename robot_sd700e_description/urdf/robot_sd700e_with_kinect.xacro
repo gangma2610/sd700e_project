@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<robot name="robot_sd700e_with_kinect" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:include filename="$(find robot_sd700e_description)/urdf/robot_sd700e.xacro" />
+  <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+
+
+
+  <xacro:property name="kinect_offset_x" value="0.05" />
+  <xacro:property name="kinect_offset_y" value="0" />
+  <xacro:property name="kinect_offset_z" value="0" />
+
+  <!-- Kinect -->
+  <!--
+  <joint name="kinect_joint" type="fixed"> 
+    <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="0 1.5707 1.570" />
+    <parent link="base_link"/>
+    <child link="sensor_d435_link"/>
+  </joint>
+-->
+  
+  <sensor_d435 parent="link7">
+    <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="0 -1.5707 3.14159"/>
+  </sensor_d435>                
+ 
+</robot>
