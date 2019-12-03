@@ -1,0 +1,9 @@
+# Define the goal
+
+mrobot_msgs/Position[] trajectory
+---
+# result definition
+sensor_msgs/JointState jointState
+---
+# feedback
+uint32 pointsCounts

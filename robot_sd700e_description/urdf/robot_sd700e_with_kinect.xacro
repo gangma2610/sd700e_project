@@ -6,6 +6,7 @@
 
 
 
+
   <xacro:property name="kinect_offset_x" value="0.05" />
   <xacro:property name="kinect_offset_y" value="0" />
   <xacro:property name="kinect_offset_z" value="0" />
@@ -18,9 +19,17 @@
     <child link="sensor_d435_link"/>
   </joint>
 -->
-  
+
+  <!-- kinect parent = link7 -->
+  <!--
   <sensor_d435 parent="link7">
     <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="0 -1.5707 3.14159"/>
-  </sensor_d435>                
+  </sensor_d435>
+  -->
+
+  <!-- kinect parent = base_link -->
+  <sensor_d435 parent="base_link">
+    <origin xyz="0.7 0 0.7" rpy="0 1.5707 0"/>
+  </sensor_d435>                 
  
 </robot>

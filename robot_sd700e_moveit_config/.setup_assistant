@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robot_sd700e_description
+    relative_path: urdf/robot_sd700e.xacro
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/robot_sd700e.srdf
+  CONFIG:
+    author_name: louis
+    author_email: lynn_mg_study@163.com
+    generated_timestamp: 1569224296
