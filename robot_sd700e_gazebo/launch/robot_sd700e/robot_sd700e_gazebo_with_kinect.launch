@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Launch Gazebo  -->
+    <include file="$(find robot_sd700e_gazebo)/launch/robot_sd700e/robot_sd700e_gazebo_world.launch" />
+
+    <!-- ros_control arm launch file -->
+    <include file="$(find robot_sd700e_gazebo)/launch/robot_sd700e/robot_sd700e_gazebo_states.launch" />   
+
+    <!-- ros_control trajectory control dof arm launch file -->
+    <include file="$(find robot_sd700e_gazebo)/launch/robot_sd700e/robot_sd700e_trajectory_controller.launch" />
+
+    <!-- moveit launch file -->
+    <include file="$(find robot_sd700e_moveit_config)/launch/planning_context_with_kinect.launch" />
+
+  <include file="$(find robot_sd700e_moveit_config)/launch/planning_context_with_kinect.launch"/>
+
+</launch>
