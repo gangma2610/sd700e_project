@@ -6,21 +6,31 @@
 
 
 
+<!--
+  <xacro:property name="kinect_offset_x" value="0.620" />
+  <xacro:property name="kinect_offset_y" value=" 0.959" />
+  <xacro:property name="kinect_offset_z" value="0.645" />
+  <xacro:property name="kinect_RPY_x" value="-0.047" />	
+  <xacro:property name="kinect_RPY_y" value="0.471" />
+  <xacro:property name="kinect_RPY_z" value="-1.665" />
+-->
 
-  <xacro:property name="kinect_offset_x" value="0.647" />
-  <xacro:property name="kinect_offset_y" value="0.955" />
-  <xacro:property name="kinect_offset_z" value="0.689" />
-  <xacro:property name="kinect_RPY_x" value="-3.08076" />	
-  <xacro:property name="kinect_RPY_y" value="-0.0440471" />
-  <xacro:property name="kinect_RPY_z" value="-2.04154" />
+  <!-- latest 2020-01-08 -->
+  <xacro:property name="kinect_offset_x" value="0.618" />
+  <xacro:property name="kinect_offset_y" value=" 0.975" />
+  <xacro:property name="kinect_offset_z" value="0.661" />
+  <xacro:property name="kinect_RPY_x" value="-0.067" />	
+  <xacro:property name="kinect_RPY_y" value=" 0.487" />
+  <xacro:property name="kinect_RPY_z" value="-1.638" />
 
-  <!-- Kinect -->
-  <!--
-  <joint name="kinect_joint" type="fixed"> 
-    <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="0 1.5707 1.570" />
-    <parent link="base_link"/>
-    <child link="sensor_d435_link"/>
-  </joint>
+
+<!--
+  <xacro:property name="kinect_offset_x" value="0.618" />
+  <xacro:property name="kinect_offset_y" value=" 0.975" />
+  <xacro:property name="kinect_offset_z" value="0.661" />
+  <xacro:property name="kinect_RPY_x" value="0.00" />	
+  <xacro:property name="kinect_RPY_y" value="0.00" />
+  <xacro:property name="kinect_RPY_z" value="0.00" />
 -->
 
   <!-- kinect parent = link7 -->
@@ -32,7 +42,7 @@
 
   <!-- kinect parent = base_link -->
   <sensor_d435 parent="base_link">
-    <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="${kinect_RPY_x} ${kinect_offset_y} ${kinect_RPY_z}"/>
-  </sensor_d435>                 
+    <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="${kinect_RPY_x} ${kinect_RPY_y} ${kinect_RPY_z}"/>
+  </sensor_d435>                 2
  
 </robot>
