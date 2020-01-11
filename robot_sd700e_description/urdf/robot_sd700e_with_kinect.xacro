@@ -24,15 +24,6 @@
   <xacro:property name="kinect_RPY_z" value="-1.638" />
 
 
-<!--
-  <xacro:property name="kinect_offset_x" value="0.618" />
-  <xacro:property name="kinect_offset_y" value=" 0.975" />
-  <xacro:property name="kinect_offset_z" value="0.661" />
-  <xacro:property name="kinect_RPY_x" value="0.00" />	
-  <xacro:property name="kinect_RPY_y" value="0.00" />
-  <xacro:property name="kinect_RPY_z" value="0.00" />
--->
-
   <!-- kinect parent = link7 -->
   <!--
   <sensor_d435 parent="link7">

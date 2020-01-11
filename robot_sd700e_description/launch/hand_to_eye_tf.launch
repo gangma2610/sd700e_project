@@ -1,3 +1,0 @@
-<launch> 
-  <node pkg="tf" type="static_transform_publisher" name="camera_to_robot_broadcaster" args="0.646186 0.95417 0.690932 -2.04154 -0.0440471 3.08076 robot_base_link base_link 100" />
-</launch>
