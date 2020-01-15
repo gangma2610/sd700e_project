@@ -16,12 +16,22 @@
 -->
 
   <!-- latest 2020-01-08 -->
+<!--
   <xacro:property name="kinect_offset_x" value="0.618" />
   <xacro:property name="kinect_offset_y" value=" 0.975" />
   <xacro:property name="kinect_offset_z" value="0.661" />
   <xacro:property name="kinect_RPY_x" value="-0.067" />	
   <xacro:property name="kinect_RPY_y" value=" 0.487" />
   <xacro:property name="kinect_RPY_z" value="-1.638" />
+-->  
+
+  <!-- latest 2020-01-14 -->
+  <xacro:property name="kinect_offset_x" value="0.622" />
+  <xacro:property name="kinect_offset_y" value=" 0.968" />
+  <xacro:property name="kinect_offset_z" value="0.641" />
+  <xacro:property name="kinect_RPY_x" value="-0.062" />	
+  <xacro:property name="kinect_RPY_y" value=" 0.467" />
+  <xacro:property name="kinect_RPY_z" value="-1.637" />
 
 
   <!-- kinect parent = link7 -->
@@ -34,6 +44,6 @@
   <!-- kinect parent = base_link -->
   <sensor_d435 parent="base_link">
     <origin xyz="${kinect_offset_x} ${kinect_offset_y} ${kinect_offset_z}" rpy="${kinect_RPY_x} ${kinect_RPY_y} ${kinect_RPY_z}"/>
-  </sensor_d435>                 2
+  </sensor_d435>
  
 </robot>
